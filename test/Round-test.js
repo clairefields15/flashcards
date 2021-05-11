@@ -26,7 +26,7 @@ describe('Round', () => {
     expect(Round).to.be.a('function')
   });
 
-  it('should instantiate a new Round',() => {
+  it('should instantiate a new Round', () => {
     const round = new Round();
     expect(round).to.be.an.instanceof(Round)
   })
@@ -48,18 +48,39 @@ describe('Round', () => {
     expect(round.incorrectGuesses).to.deep.equal([])
   })
 
-  it('should be able to take a turn', () => {
-    expect(round.takeTurn).to.be.a('function')
-    //it should take a parameter, a guess
+  it('should be able to count the turns taken', () => {
+    round.takeTurn('sea otter')
+    expect(round.turns).to.equal(1)
+  })
+
+  it('should return correct for a correct guess', () => {
+    const turn1 = round.takeTurn('sea otter')
+    expect(turn1).to.equal('Correct!')
+  })
+
+  it('should return incorrect for an incorrect guess', () => {
+    const turn1 = round.takeTurn('spleen')
+    expect(turn1).to.equal('Incorrect answer!')
+  })
+
+  it('should make the next card the current card after a guess is made', () => {
+    round.takeTurn('sea otter')
+    const turn1 = new Turn('sea otter', card1);
+    expect(round.deck.cards[0]).to.deep.equal(card2)
   })
   
-  //should create a new turn instance
-  //should pass in sea otter to the turn
-  //should also pass in currentCard
-  //const turn1 = new Turn('sea otter', card1);
-  //should turn.evaluateGuess
-  //turn1.evaluateGuess()
-  //should turn.giveFeedback
-  //turn1.giveFeedback()
+  it.skip('should store the id of an incorrect guess in an array', () => {
+    round.takeTurn('sea otter')
+    expect(round.incorrectGuesses.length).to.equal(0)
+    
+    round.takeTurn('spleen')
+    expect(round.incorrectGuesses.length).to.equal(1)
+    expect(round.incorrectGuesses).to.deep.equal([14])
+
+    //incorrectugesses.length = 1
+  })
+
+  
+  
 
 })
