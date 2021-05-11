@@ -78,6 +78,21 @@ describe('Round', () => {
     round.takeTurn('spleen')
     expect(round.incorrectGuesses.length).to.equal(1)
     expect(round.incorrectGuesses).to.deep.equal([14])
+
+    const currentCard = round.returnCurrentCard()
+    expect(currentCard).to.equal(card3)
+  })
+
+  it('should be able to calculate percent correct', () => {
+    round.takeTurn('sea otter');
+    round.takeTurn('spleen');
+    const percent = round.calculatePercentCorrect();
+    expect(percent).to.equal(50)
+  })
+
+  it('should end the round', () => {
+    const end = round.endRound();
+    //prints to the console ‘** Round over! ** You answered <>% of the questions correctly!’
   })
 
   
