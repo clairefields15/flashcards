@@ -51,6 +51,8 @@ describe('Round', () => {
   it('should be able to count the turns taken', () => {
     round.takeTurn('sea otter')
     expect(round.turns).to.equal(1)
+    round.takeTurn('pug')
+    expect(round.turns).to.equal(2)
   })
 
   it('should return correct for a correct guess', () => {
@@ -65,19 +67,17 @@ describe('Round', () => {
 
   it('should make the next card the current card after a guess is made', () => {
     round.takeTurn('sea otter')
-    const turn1 = new Turn('sea otter', card1);
-    expect(round.deck.cards[0]).to.deep.equal(card2)
+    const currentCard = round.returnCurrentCard()
+    expect(currentCard).to.deep.equal(card2)
   })
   
-  it.skip('should store the id of an incorrect guess in an array', () => {
+  it('should store the id of an incorrect guess in an array', () => {
     round.takeTurn('sea otter')
     expect(round.incorrectGuesses.length).to.equal(0)
     
     round.takeTurn('spleen')
     expect(round.incorrectGuesses.length).to.equal(1)
     expect(round.incorrectGuesses).to.deep.equal([14])
-
-    //incorrectugesses.length = 1
   })
 
   
