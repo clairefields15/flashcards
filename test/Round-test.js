@@ -40,5 +40,26 @@ describe('Round', () => {
     expect(currentCard).to.equal(card1)
   })
 
+  it('should start with zero turns', () =>{
+    expect(round.turns).to.equal(0);
+  })
+
+  it('should start with no incorrect guesses', () => {
+    expect(round.incorrectGuesses).to.deep.equal([])
+  })
+
+  it('should be able to take a turn', () => {
+    expect(round.takeTurn).to.be.a('function')
+    //it should take a parameter, a guess
+  })
+  
+  //should create a new turn instance
+  //should pass in sea otter to the turn
+  //should also pass in currentCard
+  //const turn1 = new Turn('sea otter', card1);
+  //should turn.evaluateGuess
+  //turn1.evaluateGuess()
+  //should turn.giveFeedback
+  //turn1.giveFeedback()
 
 })
