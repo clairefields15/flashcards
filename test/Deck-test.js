@@ -33,7 +33,8 @@ describe('Deck', function () {
     const card3 = new Card(12, 'What is Travis\'s middle name?', ['Lex', 'William', 'Fitzgerald'], 'Fitzgerald');
 
     const deck = new Deck([card1, card2, card3]);
+    const count = deck.countCards();
 
-    expect(deck.cards.length).to.equal(3)
+    expect(count).to.equal(3)
   })
 })
