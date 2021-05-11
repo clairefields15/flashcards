@@ -1,5 +1,6 @@
 const chai = require('chai');
 const expect = chai.expect;
+const sinon = require('sinon');
 
 const Card = require('../src/Card');
 const Turn = require('../src/Turn');
@@ -91,8 +92,13 @@ describe('Round', () => {
   })
 
   it('should end the round', () => {
-    const end = round.endRound();
-    //prints to the console ‘** Round over! ** You answered <>% of the questions correctly!’
+    const spy = sinon.spy(console, 'log')
+    round.takeTurn('sea otter');
+    round.takeTurn('spleen');
+    round.endRound();
+    const string = '** Round over! ** You answered 50% of the questions correctly!'
+    expect(spy.calledOnce).to.be.true;
+    expect(spy.calledWith(string)).to.be.true;
   })
 
   

@@ -24,7 +24,12 @@ class Round {
   calculatePercentCorrect() {
     const turns = this.turns;
     const incorrect = this.incorrectGuesses.length
-    return incorrect/turns * 100
+    return incorrect / turns * 100
+  }
+
+  endRound() {
+    const percent = this.calculatePercentCorrect();
+    console.log(`** Round over! ** You answered ${percent}% of the questions correctly!`)
   }
 
 }
