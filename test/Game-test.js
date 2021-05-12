@@ -17,7 +17,7 @@ describe('Game', () => {
     game = new Game();
   })
 
-  it('should keep track of the current round', () => {
+  it('should have a way to keep track of the current round', () => {
     game.currentRound
     expect(game.currentRound).to.equal(null)
   })
@@ -30,15 +30,5 @@ describe('Game', () => {
     expect(currentDeck).to.be.an.instanceof(Deck)
     expect(currentDeck.cards.length).to.equal(prototypeQuestions.length)
   })
-
-  it('should invoke printMessage to display the message on the CLI', () => {
-    game.start();
-    
-  })
-
-  it.skip('should invoke printQuestion to allow interaction via the CLI', () => {
-
-  })
-
 
 })

@@ -57,7 +57,7 @@ describe('Round', () => {
 
   it('should return incorrect for an incorrect guess', () => {
     const turn1 = round.takeTurn('spleen')
-    expect(turn1).to.equal('Incorrect answer!')
+    expect(turn1).to.equal('Incorrect!')
   })
 
   it('should make the next card the current card after a guess is made', () => {
