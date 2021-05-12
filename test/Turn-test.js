@@ -49,7 +49,7 @@ describe('Turn', function () {
   it('should return incorrect if false', function() {
     const turn = new Turn('pug', card);
     const feedback = turn.giveFeedback();
-    expect(feedback).to.equal('Incorrect answer!')
+    expect(feedback).to.equal('Incorrect!')
   })
 
   it('should return correct if true', function() {

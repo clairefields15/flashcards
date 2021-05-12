@@ -21,7 +21,7 @@ class Turn {
   
   giveFeedback() {
     if (!this.evaluateGuess()) {
-      return 'Incorrect answer!'
+      return 'Incorrect!'
     } else if (this.evaluateGuess()) {
       return 'Correct!'
     }
