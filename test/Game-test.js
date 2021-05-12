@@ -19,7 +19,7 @@ describe('Game', () => {
     expect(game.currentRound).to.equal(null)
   })
 
-  it.skip('should create a new Round using the Deck', () => {
+  it('should create a new Round using the Deck', () => {
     game.start();
     const currentDeck = game.currentRound.deck
 
