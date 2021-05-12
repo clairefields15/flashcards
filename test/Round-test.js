@@ -30,12 +30,12 @@ describe('Round', () => {
     expect(round.deck).to.deep.equal(deck)
   })
 
-  it('should return the first card in the deck', () =>{
+  it('should return the first card in the deck', () => {
     const currentCard = round.returnCurrentCard();
     expect(currentCard).to.equal(card1)
   })
 
-  it('should start with zero turns', () =>{
+  it('should start with zero turns', () => {
     expect(round.turns).to.equal(0);
   })
 
@@ -94,8 +94,5 @@ describe('Round', () => {
     expect(spy.calledOnce).to.be.true;
     expect(spy.calledWith(string)).to.be.true;
   })
-
-  
-  
 
 })
