@@ -3,7 +3,7 @@ const expect = chai.expect;
 
 const Card = require('../src/Card');
 
-describe('Card', function() {
+describe('Card', () => {
   let card;
 
   beforeEach(() => card = new Card()); 
