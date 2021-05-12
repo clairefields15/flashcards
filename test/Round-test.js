@@ -3,7 +3,6 @@ const expect = chai.expect;
 const sinon = require('sinon');
 
 const Card = require('../src/Card');
-const Turn = require('../src/Turn');
 const Deck = require('../src/Deck');
 const Round = require('../src/Round');
 
