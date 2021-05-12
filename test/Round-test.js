@@ -8,11 +8,7 @@ const Deck = require('../src/Deck');
 const Round = require('../src/Round');
 
 describe('Round', () => {
-  let card1;
-  let card2;
-  let card3;
-  let deck;
-  let round;
+  let card1, card2, card3, deck, round;
 
   beforeEach(() => {
     card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
@@ -23,12 +19,10 @@ describe('Round', () => {
   })
   
   it('should be a function', () => {
-    const round = new Round();
     expect(Round).to.be.a('function')
   });
 
   it('should instantiate a new Round', () => {
-    const round = new Round();
     expect(round).to.be.an.instanceof(Round)
   })
 
