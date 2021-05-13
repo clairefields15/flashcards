@@ -1,7 +1,7 @@
 # FlashCards 
 
 ## Abstract 
-This is an application that simulates flashcards and runs through the command line interface. Users are presented with a deck of 30 different questions about array prototype methods. They can take guesses and see a final score at the end of the round. 
+This is an application that runs through the command line interface and simulates flashcards. Users are presented with a deck of 30 different questions about array prototype methods, they can take guesses and see a final score at the end of the round. 
 
 The project was written by Claire Fields- a Mod 2 Front End Engineering student at the Turing School of Software and Design. The core learning goal of the project was to practice test driven development (TDD) using mocha, chai, and a tiny bit of sinon. The project language is JavaScript.
 
