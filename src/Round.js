@@ -24,7 +24,7 @@ class Round {
   calculatePercentCorrect() {
     const turns = this.turns;
     const incorrect = this.incorrectGuesses.length
-    return (turns - incorrect) / turns * 100
+    return Math.ceil((turns - incorrect) / turns * 100)
   }
 
   endRound() {
