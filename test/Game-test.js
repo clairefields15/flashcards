@@ -12,20 +12,19 @@ describe('Game', () => {
 
   beforeEach(() => {
     game = new Game();
-  })
+  });
 
   it('should have a way to keep track of the current round', () => {
-    game.currentRound
-    expect(game.currentRound).to.equal(null)
-  })
+    game.currentRound;
+    expect(game.currentRound).to.equal(null);
+  });
 
   it('should create a new Round using the Deck', () => {
     game.start();
-    const currentDeck = game.currentRound.deck
+    const currentDeck = game.currentRound.deck;
 
-    expect(currentDeck.cards[0]).to.be.an.instanceof(Card)
-    expect(currentDeck).to.be.an.instanceof(Deck)
-    expect(currentDeck.cards.length).to.equal(prototypeQuestions.length)
-  })
-
-})
+    expect(currentDeck.cards[0]).to.be.an.instanceof(Card);
+    expect(currentDeck).to.be.an.instanceof(Deck);
+    expect(currentDeck.cards.length).to.equal(prototypeQuestions.length);
+  });
+});
