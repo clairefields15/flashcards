@@ -7,7 +7,7 @@ The project was written by Claire Fields- a Mod 2 Front End Engineering student 
 
 ## Working application
 
-Users are be prompted for each question, have the opportunity to select an answer, and will be given feedback:
+Users are prompted for each question, have the opportunity to select an answer, and will be given feedback:
 
 ![start of the game](https://media.giphy.com/media/KiJJpwasR5Kjab7DG5/giphy.gif)
 
